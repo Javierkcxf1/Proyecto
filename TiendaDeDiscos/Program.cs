@@ -1,14 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Reflection.Metadata;
+
 var lista_clientes = new List<Clientes>();
 var lista_artistas = new List<Artistas>();
 var lista_discos = new List<Discos>();
 var lista_formatos = new List<Formatos>();
 var lista_pagos = new List<Pagos>();
 var lista_ordenes = new List<Ordenes>();
-var lista_inventarios = new List<Inventarios>();
+var lista_marcas = new List<Marcas>();
 var lista_ordenes_discos = new List<OrdenesDiscos>();
-var lista_inventarios_formatos = new List<InventariosFormatos>();
 
+//LISTA DE CLIENTES
 lista_clientes.Add(new Clientes()
 {
     IdCliente = "C001",
@@ -33,6 +35,7 @@ lista_clientes.Add(new Clientes()
     DireccionCliente = "Calle 12",
     TelefonoCliente = "304258299"
 });
+//LISTA DE ARTISTAS
 lista_artistas.Add(new Artistas()
 {
     IdArtista = "A001",
@@ -57,42 +60,54 @@ lista_artistas.Add(new Artistas()
     NombreArtista = "Kanye West",
     GeneroMusical = "Rap"
 });
+//LISTA DE DISCOS
 lista_discos.Add(new Discos()
 {
     IdDisco = "D001",
     Artista = "A001",
+    Marca = "1",
     NombreDisco = "Love Street",
     FechaLanzamiento = new DateTime(1968, 7, 2),
     Descripcion = "Escrita por Jim",
-    _Artista = new Artistas { IdArtista = "A001", NombreArtista = "The Doors", GeneroMusical = "Rock" }
+    _Artista = lista_artistas[0],
+    _Marcas = lista_marcas[0]
 });
 lista_discos.Add(new Discos()
 {
     IdDisco = "D002",
     Artista = "A002",
+    Marca = "2",
     NombreDisco = "My Way",
     FechaLanzamiento = new DateTime(1969, 8, 10),
     Descripcion = "Inspirada en una pelicula",
-    _Artista = new Artistas { IdArtista = "A002", NombreArtista = "Frank Sinatra", GeneroMusical = "Jazz" }
+    _Artista = lista_artistas[1],
+    _Marcas = lista_marcas[1]
 });
 lista_discos.Add(new Discos()
 {
     IdDisco = "D003",
     Artista = "A003",
+    Marca = "1",
     NombreDisco = "7 Rings",
     FechaLanzamiento = new DateTime(2019, 1, 18),
     Descripcion = "Inspirada en el empoderamiento, riqueza y amistad.",
-    _Artista = new Artistas { IdArtista = "A003", NombreArtista = "Ariana Grande", GeneroMusical = "Pop" }
+    _Artista = lista_artistas[2],
+    _Marcas = lista_marcas[0]
+
 });
 lista_discos.Add(new Discos()
 {
     IdDisco = "D004",
     Artista = "A004",
+    Marca = "3",
     NombreDisco = "I Wonder",
     FechaLanzamiento = new DateTime(1967, 5, 3),
     Descripcion = "Inspirada en la búsqueda de los sueños y la ambición",
-    _Artista = new Artistas { IdArtista = "A004", NombreArtista = "Kanye West", GeneroMusical = "Rap" }
+    _Artista = lista_artistas[3],
+    _Marcas = lista_marcas[2]
+
 });
+//LISTA DE FORMATOS
 lista_formatos.Add(new Formatos()
 {
     IdFormato = "F001",
@@ -105,6 +120,7 @@ lista_formatos.Add(new Formatos()
     TipoFormato = "CD",
     Material = "Plastico"
 });
+//LISTA DE PAGOS
 lista_pagos.Add(new Pagos()
 {
     IdPago = "P001",
@@ -117,35 +133,118 @@ lista_pagos.Add(new Pagos()
     TipoPago = "Contra entrega",
     //Falta atributo
 });
-lista_ordenes.Add(new Ordenes(){
-IdOrdenes = "AAAA",
-Fecha = new DateTime(2024,12,10),
-Cliente = "C001",
-Pago = "P001",
-MontoTotal = 150,
-_Cliente = lista_clientes[0],
-_Pago = lista_pagos[0]
+//LISTA DE ORDENES
+lista_ordenes.Add(new Ordenes()
+{
+    IdOrden = "AAAA",
+    Fecha = new DateTime(2024, 12, 10),
+    Cliente = "C001",
+    Pago = "P001",
+    MontoTotal = 1000,
+    _Cliente = lista_clientes[0],
+    _Pago = lista_pagos[0]
 });
-lista_ordenes.Add(new Ordenes(){
-IdOrdenes = "BBBB",
-Fecha = new DateTime(2024,12,10),
-Cliente = "C002",
-Pago = "P002",
-MontoTotal = 150,
-_Cliente = lista_clientes[1],
-_Pago = lista_pagos[1]
+lista_ordenes.Add(new Ordenes()
+{
+    IdOrden = "BBBB",
+    Fecha = new DateTime(2024, 11, 2),
+    Cliente = "C002",
+    Pago = "P002",
+    MontoTotal = 2000,
+    _Cliente = lista_clientes[1],
+    _Pago = lista_pagos[1]
 });
-lista_ordenes.Add(new Ordenes(){
-IdOrdenes = "CCCC",
-Fecha = new DateTime(2024,12,10),
-Cliente = "C003",
-Pago = "P001",
-MontoTotal = 150,
-_Cliente = lista_clientes[2],
-_Pago = lista_pagos[0]
+lista_ordenes.Add(new Ordenes()
+{
+    IdOrden = "CCCC",
+    Fecha = new DateTime(2024, 12, 3),
+    Cliente = "C003",
+    Pago = "P001",
+    MontoTotal = 3000,
+    _Cliente = lista_clientes[2],
+    _Pago = lista_pagos[0]
 });
-
-Console.WriteLine(lista_clientes.Count);
+//LISTA DE ORDENES DISCOS
+lista_ordenes_discos.Add(new OrdenesDiscos()
+{
+    IdOrdenDisco = "1000",
+    Orden = "AAAA",
+    Disco = "D001",
+    Formato = "F001",
+    Cantidad = 1,
+    ValorUnitario = 100,
+    _Orden = lista_ordenes[0],
+    _Disco = lista_discos[0],
+    _Formato = lista_formatos[0]
+});
+lista_ordenes_discos.Add(new OrdenesDiscos()
+{
+    IdOrdenDisco = "2000",
+    Orden = "AAAA",
+    Disco = "D002",
+    Formato = "F002",
+    Cantidad = 1,
+    ValorUnitario = 50,
+    _Orden = lista_ordenes[0],
+    _Disco = lista_discos[1],
+    _Formato = lista_formatos[1]
+});
+lista_ordenes_discos.Add(new OrdenesDiscos()
+{
+    IdOrdenDisco = "3000",
+    Orden = "BBBB",
+    Disco = "D003",
+    Formato = "F001",
+    Cantidad = 2,
+    ValorUnitario = 130,
+    _Orden = lista_ordenes[1],
+    _Disco = lista_discos[2],
+    _Formato = lista_formatos[0]
+});
+lista_ordenes_discos.Add(new OrdenesDiscos()
+{
+    IdOrdenDisco = "4000",
+    Orden = "BBBB",
+    Disco = "D004",
+    Formato = "F001",
+    Cantidad = 1,
+    ValorUnitario = 100,
+    _Orden = lista_ordenes[1],
+    _Disco = lista_discos[3],
+    _Formato = lista_formatos[0]
+});
+lista_ordenes_discos.Add(new OrdenesDiscos()
+{
+    IdOrdenDisco = "5000",
+    Orden = "CCCC",
+    Disco = "D002",
+    Formato = "F002",
+    Cantidad = 2,
+    ValorUnitario = 50,
+    _Orden = lista_ordenes[2],
+    _Disco = lista_discos[1],
+    _Formato = lista_formatos[1]
+});
+//LISTA DE MARCAS
+lista_marcas.Add(new Marcas()
+{
+    IdMarca = "1",
+    NombreMarca = "Sony",
+    PaginaWeb = "https://surl.li/thlena"
+});
+lista_marcas.Add(new Marcas()
+{
+    IdMarca = "2",
+    NombreMarca = "Warner",
+    PaginaWeb = "https://warner.com"
+});
+lista_marcas.Add(new Marcas()
+{
+    IdMarca = "3",
+    NombreMarca = "4 AD",
+    PaginaWeb = "https://4AD.com"
+});
+Console.WriteLine("Holaaaa");
 public class Clientes
 {
     public string? IdCliente { get; set; }
@@ -168,10 +267,12 @@ public class Discos
 {
     public string? IdDisco { get; set; }
     public string? Artista { get; set; } //Id del artista clave foranea
+    public string? Marca { get; set; }//Id del formato clave marca
     public string? NombreDisco { get; set; }
     public DateTime FechaLanzamiento { get; set; }
     public string? Descripcion { get; set; }
     public Artistas? _Artista { get; set; } // Propiedad de navegación para acceder a los datos del artista
+    public Marcas? _Marcas { get; set; }// Propiedad de navegación para acceder a los datos de la marca
     public List<OrdenesDiscos>? OrdenesDiscos { get; set; } //Relacion 1:M con ordenes_discos
 
 }
@@ -180,7 +281,7 @@ public class Formatos
     public string? IdFormato { get; set; }
     public string? TipoFormato { get; set; }
     public string? Material { get; set; }
-    public List<OrdenesDiscos>? OrdenesDiscos { get; set; }
+    public List<OrdenesDiscos>? OrdenesDiscos { get; set; } //Relacion 1:M con ordenes discos
 
 }
 public class Pagos
@@ -192,45 +293,36 @@ public class Pagos
 }
 public class Ordenes
 {
-    public string? IdOrdenes { get; set; }
+    public string? IdOrden { get; set; }
     public DateTime Fecha { get; set; }
     public string? Cliente { get; set; } //Id del cliente clave foranea
     public string? Pago { get; set; } //Id del pago clave foranea
     public double MontoTotal { get; set; }
     public Clientes? _Cliente { get; set; } // Propiedad de navegación para acceder a los datos del cliente
     public Pagos? _Pago { get; set; } // Propiedad de navegación para acceder a los datos del pago
-    public List<OrdenesDiscos>? OrdenesDiscos { get; set; }
+    public List<OrdenesDiscos>? OrdenesDiscos { get; set; } //Relacion 1:M con ordenes discos
 
 }
-public class Inventarios
-{
-    public int IdInventario { get; set; }
-    public int Disco { get; set; } //Id del disco clave foranea 
-    public string? Ubicacion { get; set; }
-    public int StockTotal { get; set; }
-    public Discos? _Discos { get; set; } //Relacion con discos
-}
+
 public class OrdenesDiscos
 {
-    public int IdOrdenesDiscos { get; set; }
-    public int Orden { get; set; } //Id de la orden clave foranea
-    public int Disco { get; set; } //Id del disco clave foranea
-    public int Formato { get; set; } //Id del formato clave foranea
+    public string? IdOrdenDisco { get; set; }
+    public string? Orden { get; set; } //Id de la orden clave foranea
+    public string? Disco { get; set; } //Id del disco clave foranea
+    public string? Formato { get; set; } //Id del formato clave foranea
     public int Cantidad { get; set; }
     public double ValorUnitario { get; set; }
-    public Ordenes? _Ordenes { get; set; } // Propiedad de navegación para acceder a los datos de las ordenes
+    public Ordenes? _Orden { get; set; } // Propiedad de navegación para acceder a los datos de las ordenes
     public Discos? _Disco { get; set; } // Propiedad de navegación para acceder a los datos del disco
     public Formatos? _Formato { get; set; } // Propiedad de navegación para acceder a los datos del formato
 
 }
-
-public class InventariosFormatos
+public class Marcas
 {
-    public int IdInventarioFormato { get; set; }
-    public int Inventario { get; set; } //Id del inventario clave foranea 
-    public int Formato { get; set; } //Id del formato clave foranea
-    public int StockTotal { get; set; }
-    public Inventarios? _Inventarios { get; set; } //Relacion con inventarios
-    public Formatos? _Formatos { get; set; } //Relacion con formatos
-
+    public string? IdMarca { get; set; }
+    public string? NombreMarca { get; set; }
+    public string? PaginaWeb { get; set; }
+    public List<Discos>? Discos { get; set; } //Relacion 1:M con discos
 }
+
+
