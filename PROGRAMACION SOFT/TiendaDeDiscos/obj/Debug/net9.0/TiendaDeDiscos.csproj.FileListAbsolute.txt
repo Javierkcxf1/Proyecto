@@ -1,0 +1,14 @@
+D:\PROGRAMACION SOFT\TiendaDeDiscos\bin\Debug\net9.0\TiendaDeDiscos.exe
+D:\PROGRAMACION SOFT\TiendaDeDiscos\bin\Debug\net9.0\TiendaDeDiscos.deps.json
+D:\PROGRAMACION SOFT\TiendaDeDiscos\bin\Debug\net9.0\TiendaDeDiscos.runtimeconfig.json
+D:\PROGRAMACION SOFT\TiendaDeDiscos\bin\Debug\net9.0\TiendaDeDiscos.dll
+D:\PROGRAMACION SOFT\TiendaDeDiscos\bin\Debug\net9.0\TiendaDeDiscos.pdb
+D:\PROGRAMACION SOFT\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROGRAMACION SOFT\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.AssemblyInfoInputs.cache
+D:\PROGRAMACION SOFT\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.AssemblyInfo.cs
+D:\PROGRAMACION SOFT\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.csproj.CoreCompileInputs.cache
+D:\PROGRAMACION SOFT\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.dll
+D:\PROGRAMACION SOFT\TiendaDeDiscos\obj\Debug\net9.0\refint\TiendaDeDiscos.dll
+D:\PROGRAMACION SOFT\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.pdb
+D:\PROGRAMACION SOFT\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.genruntimeconfig.cache
+D:\PROGRAMACION SOFT\TiendaDeDiscos\obj\Debug\net9.0\ref\TiendaDeDiscos.dll
