@@ -1,0 +1,15 @@
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\bin\Debug\net9.0\TiendaDeDiscos.exe
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\bin\Debug\net9.0\TiendaDeDiscos.deps.json
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\bin\Debug\net9.0\TiendaDeDiscos.runtimeconfig.json
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\bin\Debug\net9.0\TiendaDeDiscos.dll
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\bin\Debug\net9.0\TiendaDeDiscos.pdb
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.sourcelink.json
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.dll
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\obj\Debug\net9.0\refint\TiendaDeDiscos.dll
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.pdb
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\obj\Debug\net9.0\TiendaDeDiscos.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\PROYECTO\Proyecto\TiendaDeDiscos\obj\Debug\net9.0\ref\TiendaDeDiscos.dll
