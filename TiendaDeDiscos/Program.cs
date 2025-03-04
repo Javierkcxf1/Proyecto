@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using System.Reflection.Metadata;
+Console.WriteLine("Holaaaa");
 
 var lista_clientes = new List<Clientes>();
 var lista_artistas = new List<Artistas>();
@@ -59,6 +59,25 @@ lista_artistas.Add(new Artistas()
     IdArtista = "A004",
     NombreArtista = "Kanye West",
     GeneroMusical = "Rap"
+});
+//LISTA DE MARCAS
+lista_marcas.Add(new Marcas()
+{
+    IdMarca = "1",
+    NombreMarca = "Sony",
+    PaginaWeb = "https://surl.li/thlena"
+});
+lista_marcas.Add(new Marcas()
+{
+    IdMarca = "2",
+    NombreMarca = "Warner",
+    PaginaWeb = "https://warner.com"
+});
+lista_marcas.Add(new Marcas()
+{
+    IdMarca = "3",
+    NombreMarca = "4 AD",
+    PaginaWeb = "https://4AD.com"
 });
 //LISTA DE DISCOS
 lista_discos.Add(new Discos()
@@ -225,26 +244,7 @@ lista_ordenes_discos.Add(new OrdenesDiscos()
     _Disco = lista_discos[1],
     _Formato = lista_formatos[1]
 });
-//LISTA DE MARCAS
-lista_marcas.Add(new Marcas()
-{
-    IdMarca = "1",
-    NombreMarca = "Sony",
-    PaginaWeb = "https://surl.li/thlena"
-});
-lista_marcas.Add(new Marcas()
-{
-    IdMarca = "2",
-    NombreMarca = "Warner",
-    PaginaWeb = "https://warner.com"
-});
-lista_marcas.Add(new Marcas()
-{
-    IdMarca = "3",
-    NombreMarca = "4 AD",
-    PaginaWeb = "https://4AD.com"
-});
-Console.WriteLine("Holaaaa");
+
 public class Clientes
 {
     public string? IdCliente { get; set; }
@@ -324,5 +324,4 @@ public class Marcas
     public string? PaginaWeb { get; set; }
     public List<Discos>? Discos { get; set; } //Relacion 1:M con discos
 }
-
 
