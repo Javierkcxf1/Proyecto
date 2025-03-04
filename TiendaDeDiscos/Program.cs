@@ -1,5 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Holaaaa");
 
 var lista_clientes = new List<Clientes>();
 var lista_artistas = new List<Artistas>();
@@ -244,7 +243,7 @@ lista_ordenes_discos.Add(new OrdenesDiscos()
     _Disco = lista_discos[1],
     _Formato = lista_formatos[1]
 });
-
+Console.WriteLine(lista_artistas.Count);
 public class Clientes
 {
     public string? IdCliente { get; set; }
