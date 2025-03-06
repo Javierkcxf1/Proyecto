@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TiendaDeDiscos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd165775fa2b28a3a5c189eddd7420e64123b865")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+864772600c01f6526da706821f0ecbf8154470f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("TiendaDeDiscos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TiendaDeDiscos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,12 +2,12 @@
 
 var lista_clientes = new List<Clientes>(); //se crea una lista para la clase clientes
 var lista_artistas = new List<Artistas>(); //se crea una lista para la clase artistas
-var lista_discos = new List<Discos>();
-var lista_formatos = new List<Formatos>();
-var lista_pagos = new List<Pagos>();
-var lista_ordenes = new List<Ordenes>();
-var lista_marcas = new List<Marcas>();
-var lista_ordenes_discos = new List<OrdenesDiscos>();
+var lista_discos = new List<Discos>(); //se crea una lista para la clase discos
+var lista_formatos = new List<Formatos>(); //se crea una lista para la clase formatos
+var lista_pagos = new List<Pagos>(); //se crea una lista para la clase pagos
+var lista_ordenes = new List<Ordenes>(); //se crea una lista para la clase ordenes
+var lista_marcas = new List<Marcas>(); //se crea una lista para la clase marcas
+var lista_ordenes_discos = new List<OrdenesDiscos>(); //se crea una lista para la clase ordenes_discos
 
 //LISTA DE CLIENTES
 lista_clientes.Add(new Clientes() //añadimos datos a la lista
